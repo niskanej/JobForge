@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-board: #f1f5f9;
+  --color-surface: #ffffff;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-board);
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* Drag overlay styles */
+.drag-overlay {
+  opacity: 0.95;
+  transform: rotate(1.5deg) scale(1.02);
+  cursor: grabbing;
+}
+
+/* Smooth transitions for drag */
+.sortable-transition {
+  transition: transform 200ms cubic-bezier(0.25, 1, 0.5, 1);
+}
