@@ -7,7 +7,7 @@ import type { JobCard } from "@/types";
 interface CreateJobModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onCreate: (card: Omit<JobCard, "id" | "createdAt" | "columnId">) => void;
+  onCreate: (card: Omit<JobCard, "id" | "createdAt" | "columnId" | "user_id" | "position">) => void;
 }
 
 const initialForm = {
